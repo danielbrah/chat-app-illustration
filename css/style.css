@@ -204,7 +204,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 0.1em;
+  gap: 0.1e;
 }
 
 #phone #top-of-phone #chat-heading section:nth-child(1) #phone-ui-header #name {
@@ -433,6 +433,7 @@ body {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+  -webkit-appearance: none;
 }
 
 #phone #chat-conversation .radio-button section:nth-child(1) p {
