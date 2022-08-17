@@ -184,7 +184,7 @@ body
 
                     #name
                     {
-                        font-size: 0.65rem;
+                        font-size: 10.4px;
                         color: white;
                         font-weight: 400;
                     }
@@ -193,7 +193,7 @@ body
                     {
                         color: hsl(276, 100%, 81%);
                         font-weight: 400;
-                        font-size: 0.5rem;
+                        font-size: 8px;
                     }
                 }
             }
@@ -272,7 +272,7 @@ body
 
             p
             {
-                font-size: 0.5rem;  
+                font-size: 8px;  
                 width: 128px;
                 line-height: 11px;
                 padding: 0.9em;
@@ -291,7 +291,7 @@ body
 
             p
             {
-                font-size: 0.5rem;  
+                font-size: 8px;  
                 max-width: 128px;
                 line-height: 11px;
                 padding: 0.9em;
@@ -319,7 +319,7 @@ body
             {
                 display: flex;
                 align-items: center;
-                font-size: 0.5rem;  
+                font-size: 8px;
                 gap: 1em;
                 .radio-button-outline
                 {
@@ -341,7 +341,7 @@ body
             {
                 display: flex;
                 align-items: center;
-                font-size: 0.7rem;
+                font-size: 11.2px;
                 font-weight: 700;
             }
         }
@@ -355,7 +355,7 @@ body
             width: 100%;
             border-radius: 2em;
             color: $placeholder-text-color;
-            font-size: 0.5rem;
+            font-size: 8px;
             margin-top: 1em;
             padding: 0 0.5em 0 2.1em;
 
@@ -409,7 +409,7 @@ body
         font-weight: 500; 
         color: hsl(271, 36%, 24%);
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 40px;
     }
 
     p
@@ -417,6 +417,7 @@ body
         color: hsl(210, 4%, 67%);
         line-height: 1.8;
         text-align: center;
+        font-size: 16px;
     }
 }
 
