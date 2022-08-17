@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+$gradient-lightmagneta: hsl(293, 100%, 63%);
+$gradient-lightviolet: hsl(264, 100%, 61%);
+$left-chat-color: hsl(276, 55%, 52%);
+$right-chat-color: hsl(271, 15%, 43%);
+$main-font: 'Rubik', sans-serif; 
+$placeholder-text-color: hsl(206, 6%, 79%);
+$button-bg-color: hsl(271, 36%, 24%);
+$animation-delay: 1;
+
+
+@mixin center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    font-family: $main-font;
+}
+
+#container
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#shapes-container
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+// Done - Now adjust for mobile
+#shape-1
+{
+    position: absolute;
+    top: 0;
+    left: -212px;
+    background-image: linear-gradient(top right, $gradient-lightmagneta, $gradient-lightviolet);
+    width: 400px;
+    height: 53.5%;
+    border-radius: 0 0 999px 999px;
+}
+
+// Done - Now adjust for mobile
+#shape-2
+{
+    position: absolute;
+    bottom: 0;
+    right: -200px;
+    background-image: linear-gradient($gradient-lightmagneta, $gradient-lightviolet);
+    width: 387px;
+    height: 53%;
+    border-radius: 999px 999px 0 0;
+    opacity: 0.05;
+}
+
+#app-info-container
+{
+    @include center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#app-info
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    z-index: 999;
+    gap: 3.5em;
+    padding: 2em 0 2em 0;
+}
+
+// PHONE // 
+#phone
+{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    border: 9px solid white;
+    height: 505px;
+    width: 247px;
+    box-shadow: 0.7em 0.7em 2em 0.5em hsla(0, 0%, 0%, 0.1);
+    border-radius: 2em;
+
+    #phone-background
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: hsl(270, 20%, 96%);
+        z-index: 0;
+        border-radius: 1.5em 1.5em 1.5em 1.35em;
+    }
+
+    #top-of-phone
+    {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-image: linear-gradient(90deg, $gradient-lightviolet, $gradient-lightmagneta);
+        border-radius: 1.5em 1.5em 8px 8px;
+        z-index: 1;
+        height: 66px;
+        #notch
+        {
+            width: 129px;
+            height: 18px;
+            background: white;
+            border-radius: 0 0 0.8em 0.8em;
+        }
+
+        #chat-heading
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0.7em 1.2em;
+            section:nth-child(1)
+            {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                img
+                {
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                }
+    
+                #arrow1
+                {
+                    display: flex;
+                    flex-flow: column;
+                    span
+                    {
+                        display: block;
+                        background: white;
+                        height: 8px;
+                        width: 2.2px;
+                        border-radius: 3px;
+                        
+                        &:nth-child(1)
+                        {
+                            transform: rotate(30deg) translateY(2px);
+                        }
+
+                        &:nth-child(2)
+                        {
+                            transform: rotate(-30deg) translateY(-2px);
+                        }
+                    }
+                }
+
+                #phone-ui-header
+                {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-between;
+                    gap: 0.1em;
+
+                    #name
+                    {
+                        font-size: 0.65rem;
+                        color: white;
+                        font-weight: 400;
+                    }
+
+                    #subheader
+                    {
+                        color: hsl(276, 100%, 81%);
+                        font-weight: 400;
+                        font-size: 0.5rem;
+                    }
+                }
+            }
+
+            section:nth-child(2)
+            {
+                display: flex;
+                align-items: center;
+                .dot
+                {
+                    display: block;
+                    background: white;
+                    width: 3px;
+                    height: 3px;
+                    margin: 3px 0 3px 0;
+                }
+            }
+        }
+    }
+
+    #chat-conversation
+    {
+        display: flex;
+        flex-flow: column;
+        gap: 0.5em;
+        flex: 1;
+        border-radius: 0 0 1.5em 1.35em;
+        background: hsl(270, 20%, 96%);
+        z-index: 1;
+        padding: 11px;
+
+        & > div
+        {
+            position: relative;
+            flex: 1;
+        }
+
+        // & div:nth-child(1){animation: message-anim 0.3s linear}
+        // & div:nth-child(1){animation: message-anim 0.3s linear}
+        // & div:nth-child(1){animation: message-anim 0.3s linear}
+
+        @for $i from 1 through 8
+        {
+            & > div:nth-child(#{$i})
+            {
+                opacity: 0;
+                bottom: -6px;
+                animation: message-anim 0.2s linear forwards;
+                animation-delay: calc(#{$i + 0.5}s);
+            }
+        }
+
+        // Pictures
+        #pictures
+        {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-top: 0.5em;
+
+            img
+            {
+                height: 40px;
+                width: 40px;
+                border-radius: 8px;
+            }
+        }
+
+        // Left chat
+        .left-chat
+        {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: $left-chat-color;
+
+            p
+            {
+                font-size: 0.5rem;  
+                width: 128px;
+                line-height: 11px;
+                padding: 0.9em;
+                background: hsl(280, 100%, 94%);
+                border-radius: 1.5em 1.5em 1.5em 0.5em;
+            }
+        }
+
+        // Right chat
+        .right-chat
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: $right-chat-color;
+
+            p
+            {
+                font-size: 0.5rem;  
+                max-width: 128px;
+                line-height: 11px;
+                padding: 0.9em;
+                background: white;
+                border-radius: 1.5em 1.5em 0.5em 1.5em;
+                box-shadow: 0 0.4em 1em hsl(0, 0%, 50% / 0.6);
+            }
+        }
+
+        // Radio buttons
+
+        .radio-button
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 160px;
+            height: 30px;
+            background-image: linear-gradient(90deg, $gradient-lightmagneta, $gradient-lightviolet);
+            border-radius: 0.5em 0.5em 0.5em 0.25em;
+            color: white;
+            padding: 0 1em 0 0.5em;
+
+            section:nth-child(1)
+            {
+                display: flex;
+                align-items: center;
+                font-size: 0.5rem;  
+                gap: 1em;
+                .radio-button-outline
+                {
+                    height: 8px;
+                    width: 8px;
+                    outline: 1px solid hsl(289, 100%, 72%);
+                    border-radius: 50%;
+                }
+
+                p
+                {
+                    font-weight: 400;
+                }
+            }
+
+            section:nth-child(2)
+            {
+                display: flex;
+                align-items: center;
+                font-size: 0.7rem;
+                font-weight: 700;
+            }
+        }
+
+        #type-message
+        {
+            
+            display: flex;
+            align-items: center;
+            background: white;
+            width: 100%;
+            border-radius: 2em;
+            color: $placeholder-text-color;
+            font-size: 0.5rem;
+            margin-top: 1em;
+            padding: 0 0.5em 0 2.1em;
+
+            p
+            {
+                flex: 1;
+            }
+
+                    
+            #arrow2
+            {
+                @include center;
+                flex-flow: column;
+                background: $button-bg-color;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                span
+                {
+                    display: block;
+                    background: white;
+                    height: 7px;
+                    width: 2px;
+                    border-radius: 3px;
+                    margin-left: -2px;
+                    
+                    &:nth-child(1)
+                    {
+                        transform: rotate(135deg) translateY(-2.3px);
+                    }
+
+                    &:nth-child(2)
+                    {
+                        transform: rotate(-135deg) translateY(2.2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#app-text
+{
+    display: flex;
+    flex-flow: column;
+    gap: 1.5em;
+    max-width: 30ch;
+
+    h1
+    {
+        font-weight: 500; 
+        color: hsl(271, 36%, 24%);
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    p
+    {
+        color: hsl(210, 4%, 67%);
+        line-height: 1.8;
+        text-align: center;
+    }
+}
+
+@keyframes message-anim
+{
+    0%
+    {
+        bottom: -6px;
+        opacity: 0;
+    }
+
+    100%
+    {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+// Desktop // 
+@media only screen and (min-width: 949px)
+{
+    body{
+     height: 100vh;
+    }
+
+    #container
+    {
+        height: 100%;
+    }
+    // Done
+    #shape-1
+    {
+        left: -112.8px;
+        width: 37%;
+        height: 87%;
+    }
+
+    // Done
+    #shape-2
+    {
+        right: -270.16px;
+        width: 41.4%;
+        height: 85%;
+    }
+
+    #app-info-container
+    {
+        height: 100%;
+    }
+
+    #app-info
+    {
+        flex-flow: row;
+        padding: 0 0 0 7.2em;
+        gap: 125px;
+    }
+
+    #app-text
+    {
+        max-width: 45ch;
+
+        h1, p{text-align: left;}
+    }
+}

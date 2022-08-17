@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+}
+
+#container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#shapes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#shape-1 {
+  position: absolute;
+  top: 0;
+  left: -212px;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(top right, #e942ff, #8838ff);
+  width: 400px;
+  height: 53.5%;
+  border-radius: 0 0 999px 999px;
+}
+
+#shape-2 {
+  position: absolute;
+  bottom: 0;
+  right: -200px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(#e942ff, #8838ff);
+  width: 387px;
+  height: 53%;
+  border-radius: 999px 999px 0 0;
+  opacity: 0.05;
+}
+
+#app-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#app-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  z-index: 999;
+  gap: 3.5em;
+  padding: 2em 0 2em 0;
+}
+
+#phone {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  border: 9px solid white;
+  height: 505px;
+  width: 247px;
+  -webkit-box-shadow: 0.7em 0.7em 2em 0.5em rgba(0, 0, 0, 0.1);
+          box-shadow: 0.7em 0.7em 2em 0.5em rgba(0, 0, 0, 0.1);
+  border-radius: 2em;
+}
+
+#phone #phone-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f5f3f7;
+  z-index: 0;
+  border-radius: 1.5em 1.5em 1.5em 1.35em;
+}
+
+#phone #top-of-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background-image: linear-gradient(90deg, #8838ff, #e942ff);
+  border-radius: 1.5em 1.5em 8px 8px;
+  z-index: 1;
+  height: 66px;
+}
+
+#phone #top-of-phone #notch {
+  width: 129px;
+  height: 18px;
+  background: white;
+  border-radius: 0 0 0.8em 0.8em;
+}
+
+#phone #top-of-phone #chat-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0.7em 1.2em;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) #arrow1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) #arrow1 span {
+  display: block;
+  background: white;
+  height: 8px;
+  width: 2.2px;
+  border-radius: 3px;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) #arrow1 span:nth-child(1) {
+  -webkit-transform: rotate(30deg) translateY(2px);
+          transform: rotate(30deg) translateY(2px);
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) #arrow1 span:nth-child(2) {
+  -webkit-transform: rotate(-30deg) translateY(-2px);
+          transform: rotate(-30deg) translateY(-2px);
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) #phone-ui-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.1em;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) #phone-ui-header #name {
+  font-size: 0.65rem;
+  color: white;
+  font-weight: 400;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(1) #phone-ui-header #subheader {
+  color: #d89eff;
+  font-weight: 400;
+  font-size: 0.5rem;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#phone #top-of-phone #chat-heading section:nth-child(2) .dot {
+  display: block;
+  background: white;
+  width: 3px;
+  height: 3px;
+  margin: 3px 0 3px 0;
+}
+
+#phone #chat-conversation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 0.5em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 0 0 1.5em 1.35em;
+  background: #f5f3f7;
+  z-index: 1;
+  padding: 11px;
+}
+
+#phone #chat-conversation > div {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#phone #chat-conversation > div:nth-child(1) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(1.5s);
+          animation-delay: calc(1.5s);
+}
+
+#phone #chat-conversation > div:nth-child(2) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(2.5s);
+          animation-delay: calc(2.5s);
+}
+
+#phone #chat-conversation > div:nth-child(3) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(3.5s);
+          animation-delay: calc(3.5s);
+}
+
+#phone #chat-conversation > div:nth-child(4) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(4.5s);
+          animation-delay: calc(4.5s);
+}
+
+#phone #chat-conversation > div:nth-child(5) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(5.5s);
+          animation-delay: calc(5.5s);
+}
+
+#phone #chat-conversation > div:nth-child(6) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(6.5s);
+          animation-delay: calc(6.5s);
+}
+
+#phone #chat-conversation > div:nth-child(7) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(7.5s);
+          animation-delay: calc(7.5s);
+}
+
+#phone #chat-conversation > div:nth-child(8) {
+  opacity: 0;
+  bottom: -6px;
+  -webkit-animation: message-anim 0.2s linear forwards;
+          animation: message-anim 0.2s linear forwards;
+  -webkit-animation-delay: calc(8.5s);
+          animation-delay: calc(8.5s);
+}
+
+#phone #chat-conversation #pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 8px;
+  margin-top: 0.5em;
+}
+
+#phone #chat-conversation #pictures img {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+}
+
+#phone #chat-conversation .left-chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #9241c8;
+}
+
+#phone #chat-conversation .left-chat p {
+  font-size: 0.5rem;
+  width: 128px;
+  line-height: 11px;
+  padding: 0.9em;
+  background: #f5e0ff;
+  border-radius: 1.5em 1.5em 1.5em 0.5em;
+}
+
+#phone #chat-conversation .right-chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #6e5d7e;
+}
+
+#phone #chat-conversation .right-chat p {
+  font-size: 0.5rem;
+  max-width: 128px;
+  line-height: 11px;
+  padding: 0.9em;
+  background: white;
+  border-radius: 1.5em 1.5em 0.5em 1.5em;
+  -webkit-box-shadow: 0 0.4em 1em #d5d5d5;
+          box-shadow: 0 0.4em 1em #d5d5d5;
+}
+
+#phone #chat-conversation .radio-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 160px;
+  height: 30px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(90deg, #e942ff, #8838ff);
+  border-radius: 0.5em 0.5em 0.5em 0.25em;
+  color: white;
+  padding: 0 1em 0 0.5em;
+}
+
+#phone #chat-conversation .radio-button section:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.5rem;
+  gap: 1em;
+}
+
+#phone #chat-conversation .radio-button section:nth-child(1) .radio-button-outline {
+  height: 8px;
+  width: 8px;
+  outline: 1px solid #e570ff;
+  border-radius: 50%;
+}
+
+#phone #chat-conversation .radio-button section:nth-child(1) p {
+  font-weight: 400;
+}
+
+#phone #chat-conversation .radio-button section:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+#phone #chat-conversation #type-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  width: 100%;
+  border-radius: 2em;
+  color: #c6cacd;
+  font-size: 0.5rem;
+  margin-top: 1em;
+  padding: 0 0.5em 0 2.1em;
+}
+
+#phone #chat-conversation #type-message p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#phone #chat-conversation #type-message #arrow2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background: #3e2753;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+#phone #chat-conversation #type-message #arrow2 span {
+  display: block;
+  background: white;
+  height: 7px;
+  width: 2px;
+  border-radius: 3px;
+  margin-left: -2px;
+}
+
+#phone #chat-conversation #type-message #arrow2 span:nth-child(1) {
+  -webkit-transform: rotate(135deg) translateY(-2.3px);
+          transform: rotate(135deg) translateY(-2.3px);
+}
+
+#phone #chat-conversation #type-message #arrow2 span:nth-child(2) {
+  -webkit-transform: rotate(-135deg) translateY(2.2px);
+          transform: rotate(-135deg) translateY(2.2px);
+}
+
+#app-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 1.5em;
+  max-width: 30ch;
+}
+
+#app-text h1 {
+  font-weight: 500;
+  color: #3e2753;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#app-text p {
+  color: #a7abae;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@-webkit-keyframes message-anim {
+  0% {
+    bottom: -6px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes message-anim {
+  0% {
+    bottom: -6px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 949px) {
+  body {
+    height: 100vh;
+  }
+  #container {
+    height: 100%;
+  }
+  #shape-1 {
+    left: -112.8px;
+    width: 37%;
+    height: 87%;
+  }
+  #shape-2 {
+    right: -270.16px;
+    width: 41.4%;
+    height: 85%;
+  }
+  #app-info-container {
+    height: 100%;
+  }
+  #app-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    padding: 0 0 0 7.2em;
+    gap: 125px;
+  }
+  #app-text {
+    max-width: 45ch;
+  }
+  #app-text h1, #app-text p {
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=style.css.map */
