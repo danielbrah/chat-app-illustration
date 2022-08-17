@@ -427,12 +427,10 @@ body {
 }
 
 #phone #chat-conversation .radio-button section:nth-child(1) .radio-button-outline {
-  height: 8px;
-  width: 8px;
-  display: inline-block;
-  border-radius: 50%;
-  -khtml-border-radius: 50%;
+  height: 11px;
+  width: 11px;
   border: 1px solid #e570ff;
+  border-radius: 50%;
 }
 
 #phone #chat-conversation .radio-button section:nth-child(1) p {
