@@ -47,6 +47,6 @@ Users should be able to:
 - [Resource 1](https://developer.mozilla.org/en-US/) - The MDN Web Docs helped me a lot with box shadows and gradients. 
 
 ## Author
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- GitHub - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [danielbrah](https://www.frontendmentor.io/profile/danielbrah)
+- GitHub - [@danielbrah](https://github.com/danielbrah)
 
