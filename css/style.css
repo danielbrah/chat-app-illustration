@@ -431,6 +431,8 @@ body {
   width: 8px;
   outline: 1px solid #e570ff;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
 
 #phone #chat-conversation .radio-button section:nth-child(1) p {
