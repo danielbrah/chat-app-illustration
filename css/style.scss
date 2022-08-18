@@ -187,7 +187,7 @@ body
                     {
                         font-size: 10.4px;
                         color: white;
-                        font-weight: 400;
+                        font-weight: 500;
                     }
 
                     #subheader
@@ -447,9 +447,9 @@ body
 // Desktop // 
 @media only screen and (min-width: 949px)
 {
-    body{
-     height: 100vh;
-    }
+    // body{
+    //  height: 100vh;
+    // }
 
     #container
     {
@@ -471,15 +471,15 @@ body
         height: 85%;
     }
 
-    #app-info-container
-    {
-        height: 100%;
-    }
+    // #app-info-container
+    // {
+    //     height: 100%;
+    // }
 
     #app-info
     {
         flex-flow: row;
-        padding: 0 0 0 7.2em;
+        padding: 2em 0 2em 7.2em;
         gap: 125px;
     }
 
