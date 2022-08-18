@@ -266,8 +266,6 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(1.5s);
-          animation-delay: calc(1.5s);
 }
 
 #phone #chat-conversation > div:nth-child(2) {
@@ -275,8 +273,8 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(2.5s);
-          animation-delay: calc(2.5s);
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 #phone #chat-conversation > div:nth-child(3) {
@@ -284,8 +282,8 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(3.5s);
-          animation-delay: calc(3.5s);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 #phone #chat-conversation > div:nth-child(4) {
@@ -293,8 +291,8 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(4.5s);
-          animation-delay: calc(4.5s);
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 #phone #chat-conversation > div:nth-child(5) {
@@ -302,8 +300,8 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(5.5s);
-          animation-delay: calc(5.5s);
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 #phone #chat-conversation > div:nth-child(6) {
@@ -311,8 +309,8 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(6.5s);
-          animation-delay: calc(6.5s);
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 #phone #chat-conversation > div:nth-child(7) {
@@ -320,8 +318,8 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(7.5s);
-          animation-delay: calc(7.5s);
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 
 #phone #chat-conversation > div:nth-child(8) {
@@ -329,8 +327,8 @@ body {
   bottom: -6px;
   -webkit-animation: message-anim 0.2s linear forwards;
           animation: message-anim 0.2s linear forwards;
-  -webkit-animation-delay: calc(8.5s);
-          animation-delay: calc(8.5s);
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
 }
 
 #phone #chat-conversation #pictures {

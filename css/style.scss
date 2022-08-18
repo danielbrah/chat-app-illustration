@@ -7,6 +7,7 @@ $main-font: 'Rubik', sans-serif;
 $placeholder-text-color: hsl(206, 6%, 79%);
 $button-bg-color: hsl(271, 36%, 24%);
 $animation-delay: 1;
+$counter: 0;
 
 
 @mixin center
@@ -231,19 +232,28 @@ body
             flex: 1;
         }
 
-        // & div:nth-child(1){animation: message-anim 0.3s linear}
-        // & div:nth-child(1){animation: message-anim 0.3s linear}
-        // & div:nth-child(1){animation: message-anim 0.3s linear}
-
         @for $i from 1 through 8
         {
-            & > div:nth-child(#{$i})
+            @if $i == 1
             {
-                opacity: 0;
-                bottom: -6px;
-                animation: message-anim 0.2s linear forwards;
-                animation-delay: calc(#{$i + 0.5}s);
+                & > div:nth-child(#{$i})
+                {
+                    opacity: 0;
+                    bottom: -6px;
+                    animation: message-anim 0.2s linear forwards;
+                }
             }
+            @else
+            {
+                & > div:nth-child(#{$i})
+                {
+                    opacity: 0;
+                    bottom: -6px;
+                    animation: message-anim 0.2s linear forwards;
+                    animation-delay: #{$counter}s;
+                }
+            }
+            $counter: $counter + 1;
         }
 
         // Pictures
