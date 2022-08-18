@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: (https://github.com/danielbrah/chat-app-illustration)
 - Live Site URL: (https://chat-app-illustration-danielbrah.netlify.app)
 
 ## My process
